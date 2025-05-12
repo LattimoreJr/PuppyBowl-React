@@ -2,6 +2,7 @@ import AllPlayers from "./components/Players/AllPlayers"
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { Route, Routes } from "react-router-dom"
+import SinglePlayer from "./components/Players/SinglePlayer"
 
 function App() {
   const [allPuppies, setAllPuppies] = useState([])
@@ -31,6 +32,7 @@ function App() {
     <Routes>
       <Route path="/" element={<AllPlayers allPuppies={allPuppies} setAllPuppies={setAllPuppies}/>}/>
       <Route path="/players" element={<AllPlayers allPuppies={allPuppies} setAllPuppies={setAllPuppies}/>}/>
+      <Route path="/players/:id" element={<SinglePlayer allPuppies={allPuppies} setAllPuppies={setAllPuppies}/>}/>
     </Routes>
 
 

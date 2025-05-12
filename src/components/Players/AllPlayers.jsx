@@ -10,9 +10,13 @@ const AllPlayers = ({allPuppies, setAllPuppies}) => {
                     allPuppies.map((puppy) => {
                       return (
                         <div key={puppy.id} className="player">
+                            <Link to={`/players/${puppy.id}`}>
                             <h3>{puppy.name}</h3>
-                            <p>Breed: {puppy.breed}</p>
+                            </Link>
+                        
                             <img src={puppy.imageUrl}/>
+                            <br/>
+                            <button>Delete Player</button>
                         </div>
                       )
                     })

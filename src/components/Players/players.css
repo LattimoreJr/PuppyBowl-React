@@ -4,9 +4,12 @@
 }
 
 .playersContainer > .player {
+    background-color: black;
+    color: goldenrod;
     margin: 1rem;
     padding: 1rem;
-    border: 2px solid darkred;
+    border: 2px solid black;
+    box-shadow: 5px 5px darkred;
 }
 
 .player > img {
