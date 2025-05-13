@@ -17,7 +17,7 @@ const SinglePlayer = ({allPuppies, setAllPuppies}) => {
            <h3>{puppy.name}</h3>
             <p>{puppy.breed}</p>
             <p>{puppy.status}</p>
-            <img src={puppy.imageUrl}/>
+            <img src={puppy.imageUrl ? puppy.imageUrl : null} alt={puppy.name}/>
            </div>) : (
                 <h3>Loading...</h3>
            )}
