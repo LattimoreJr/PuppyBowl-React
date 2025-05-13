@@ -17,11 +17,20 @@ const AllPlayers = ({allPuppies, setAllPuppies}) => {
         }
     }
 
+    const searchForPlayers = (formData) => {
+        const target = formData.get("searchBar").toLowerCase()
+        navigate(`/players/search/?player=${target}`)
+    }
 
     return (
         <div>
             <h2>Here are our Players!</h2>
             <h2>Here comes a new <Link to="/players/addNew">Challenger!</Link></h2>
+            <h3>Search for a player here: </h3>
+            <form action={searchForPlayers}>
+                <input type="text" name="searchBar"/>
+                <button>Search</button>
+            </form>
             <div className="playersContainer">
                 {
                     allPuppies.map((puppy) => {
